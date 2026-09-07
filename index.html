@@ -1,0 +1,52 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>POWER CODES — Trilogia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500&family=Inter:wght@600;800&family=Poppins:wght@600&display=swap">
+<style>
+*{box-sizing:border-box}html{background:#0B0C10}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:radial-gradient(circle at 15% 20%,rgba(193,98,43,.12),transparent 30%),radial-gradient(circle at 85% 15%,rgba(25,195,125,.10),transparent 30%),radial-gradient(circle at 50% 90%,rgba(139,92,246,.12),transparent 35%),#0B0C10;color:#EDEDED;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px;overflow-x:hidden;perspective:1600px}
+.wrap{max-width:980px;width:100%}
+h1{font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;margin:0 0 8px}
+.sub{color:#9A9AA5;margin:0 0 44px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{position:relative;border-radius:22px;padding:26px 20px 22px;text-decoration:none;overflow:hidden;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .3s ease-out,box-shadow .3s;transform-style:preserve-3d;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.card:hover{box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.logo-wrap{position:absolute;top:18px;left:0;right:0;display:flex;justify-content:center;height:130px;z-index:1}
+.logo-wrap img{height:100%;object-fit:contain;transform:translateZ(40px);transition:transform .3s}
+.halo{position:absolute;top:18px;left:50%;width:180px;height:130px;margin-left:-90px;border-radius:50%;filter:blur(24px);opacity:.5;z-index:0;animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.body-txt{position:relative;z-index:2}
+.tag{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:6px}
+.name{font-size:23px;font-weight:800;margin:0 0 4px}
+.count{font-size:13px;opacity:.85}
+.claude{background:linear-gradient(160deg,#F6F1E6,#EEE3CC);color:#2E2718}
+.claude .name{font-family:'Fraunces',serif;font-weight:500}
+.claude .tag{color:#8A3C1E}
+.claude .halo{background:conic-gradient(from 0deg,transparent,#C1622B,transparent 60%)}
+.chatgpt{background:linear-gradient(160deg,#101214,#0A0B0D);color:#ECECEC;border:1px solid rgba(255,255,255,.08)}
+.chatgpt .tag{color:#19C37D}
+.chatgpt .halo{background:conic-gradient(from 0deg,transparent,#19C37D,transparent 60%)}
+.gemini{background:linear-gradient(160deg,#FFFFFF,#EEF1FB);color:#1F1F1F}
+.gemini .name{font-family:'Poppins',sans-serif}
+.gemini .tag{background:linear-gradient(90deg,#4B7BF5,#8B5CF6,#EC5496);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gemini .halo{background:conic-gradient(from 0deg,transparent,#4B7BF5,#8B5CF6,#EC5496,transparent 80%)}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body><div class="wrap">
+<h1>POWER CODES — Trilogia</h1>
+<p class="sub">Escolha o atlas. Cada um carrega a identidade visual da IA a que se refere.</p>
+<div class="grid">
+<a class="card claude" data-tilt href="CLAUDE_POWER_CODES_ATLAS_PREMIUM.html"><div class="halo"></div><div class="logo-wrap"><img src="assets/POWER_CODES_LOGO_COLOR.png" alt="Power Codes"></div><div class="body-txt"><div class="tag">Anthropic</div><div class="name">Claude Power Codes</div><div class="count">162 atalhos</div></div></a>
+<a class="card chatgpt" data-tilt href="CHATGPT_POWER_CODES_ATLAS_PREMIUM.html"><div class="halo"></div><div class="logo-wrap"><img src="assets/POWER_CODES_LOGO_BRANCA.png" alt="Power Codes"></div><div class="body-txt"><div class="tag">OpenAI</div><div class="name">ChatGPT Power Codes</div><div class="count">111 atalhos</div></div></a>
+<a class="card gemini" data-tilt href="GEMINI_POWER_CODES_ATLAS_PREMIUM.html"><div class="halo"></div><div class="logo-wrap"><img src="assets/POWER_CODES_LOGO_PRETA.png" alt="Power Codes"></div><div class="body-txt"><div class="tag">Google</div><div class="name">Gemini Power Codes</div><div class="count">132 atalhos</div></div></a>
+</div>
+</div>
+<script>
+document.querySelectorAll('[data-tilt]').forEach(c=>{
+  c.addEventListener('pointermove',e=>{
+    const r=c.getBoundingClientRect();
+    const px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+    c.style.transform=`translateY(-6px) rotateY(${px*14}deg) rotateX(${-py*14}deg)`;
+  });
+  c.addEventListener('pointerleave',()=>{c.style.transform='';});
+});
+</script>
+</body></html>
