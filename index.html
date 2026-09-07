@@ -49,8 +49,16 @@ h1{font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;margin:0 0 8px}
 .gemini .tag{background:linear-gradient(90deg,#4B7BF5,#8B5CF6,#EC5496);-webkit-background-clip:text;background-clip:text;color:transparent}
 .gemini .halo{background:conic-gradient(from 0deg,transparent,#4B7BF5,#8B5CF6,#EC5496,transparent 80%)}
 @media(max-width:760px){.grid{grid-template-columns:1fr}}
+.brand-float{position:fixed;top:34px;right:40px;width:min(230px,20vw);z-index:5;pointer-events:none;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.brand-float img{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 44px rgba(193,98,43,.4)) drop-shadow(0 0 60px rgba(193,98,43,.2));animation:brand-floaty 7s ease-in-out infinite}
+@keyframes brand-floaty{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(1.4deg)}}
+@media(max-width:900px){.brand-float{width:min(160px,26vw);top:22px;right:22px}}
+@media(max-width:600px){.brand-float{display:none}}
+@media(prefers-reduced-motion:reduce){.brand-float img{animation:none}}
 </style></head>
-<body><div class="wrap">
+<body>
+<div class="brand-float" aria-hidden="true"><img src="assets/POWER_CODES_LOGO_COLOR.png" alt=""></div>
+<div class="wrap">
 <h1>POWER CODES — Trilogia</h1>
 <p class="sub">Escolha um atlas para descobrir os Códigos Secretos que potencializam cada IA</p>
 <div class="grid">
@@ -60,6 +68,13 @@ h1{font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;margin:0 0 8px}
 </div>
 </div>
 <script>
+const brandFloat=document.querySelector('.brand-float');
+if(brandFloat&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  window.addEventListener('pointermove',e=>{
+    const px=(e.clientX/window.innerWidth-.5), py=(e.clientY/window.innerHeight-.5);
+    brandFloat.style.transform=`translate(${px*-22}px, ${py*-16}px)`;
+  });
+}
 document.querySelectorAll('[data-tilt]').forEach(c=>{
   c.addEventListener('pointermove',e=>{
     const r=c.getBoundingClientRect();
