@@ -1,0 +1,19 @@
+# Power Codes
+
+> Trilogia de atlas interativos com atalhos e comandos ("power codes") para Claude, ChatGPT e Gemini — códigos curtos que, colados no fim de um prompt, mudam o comportamento do modelo (registro, formato, rigor analítico, tom) de forma previsível e reprodutível.
+
+Power Codes documenta, para cada IA, quais atalhos existem, onde usá-los, quando usá-los, e o efeito comparado (antes/depois) de aplicá-los. Cada atlas também sinaliza mitos comuns (comandos que circulam informalmente mas não têm efeito real).
+
+## Páginas
+
+- [Índice / hub de lançamento](https://powercodes.vercel.app/): visão geral da trilogia, com link para os três atlas.
+- [Claude Power Codes](https://powercodes.vercel.app/CLAUDE_POWER_CODES_ATLAS_PREMIUM.html): 162 atalhos para Claude Chat e Claude Code (Anthropic).
+- [ChatGPT Power Codes](https://powercodes.vercel.app/CHATGPT_POWER_CODES_ATLAS_PREMIUM.html): 111 atalhos para ChatGPT (OpenAI).
+- [Gemini Power Codes](https://powercodes.vercel.app/GEMINI_POWER_CODES_ATLAS_PREMIUM.html): 132 atalhos para Gemini (Google).
+
+## Notas para reuso
+
+- Cada atalho é identificado por um código curto (ex.: `L99`, `SKEPTIC`, `/nofilter`) exibido em cada card junto com: onde usar, quando usar, como usar, e uma comparação antes/depois do efeito.
+- Cards marcados como "MITO" descrevem comandos amplamente divulgados que não têm efeito real — importante não confundir com os atalhos funcionais ("POWER CODE").
+- Conteúdo em português do Brasil (pt-BR).
+- Idioma e escopo: uso educacional/informativo sobre prompt engineering; não substitui a documentação oficial de cada provedor de IA.
